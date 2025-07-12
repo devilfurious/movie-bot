@@ -9,7 +9,7 @@ API_HASH = os.environ.get("API_HASH")
 
 # List of your private channel usernames or IDs (example: -1001234567890)
 CHANNELS = [
-    -1002586828025
+    "Movies"
 ]
 
 app = Client("movie_bot", bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH)
