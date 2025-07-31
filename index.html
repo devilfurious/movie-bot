@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS HUD Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hud-container">
+        <!-- Main HUD Frame -->
+        <div class="hud-frame">
+            <!-- Top Status Bar -->
+            <div class="status-bar">
+                <div class="status-left">
+                    <span class="status-text">JARVIS v3.7.2</span>
+                    <span class="status-dot active"></span>
+                    <span class="status-text">ONLINE</span>
+                </div>
+                <div class="status-center">
+                    <div class="time-display" id="timeDisplay">00:00:00</div>
+                </div>
+                <div class="status-right">
+                    <span class="status-text">SECURITY: </span>
+                    <span class="security-level">MAXIMUM</span>
+                </div>
+            </div>
+
+            <!-- Central HUD Circle -->
+            <div class="central-hud">
+                <div class="hud-circle">
+                    <div class="circle-ring ring-1"></div>
+                    <div class="circle-ring ring-2"></div>
+                    <div class="circle-ring ring-3"></div>
+                    <div class="hud-center">
+                        <div class="center-logo">J.A.R.V.I.S</div>
+                        <div class="center-status">INITIALIZING...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left Panel -->
+            <div class="left-panel">
+                <div class="panel-header">SYSTEM STATUS</div>
+                <div class="system-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">CPU:</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 73%"></div>
+                        </div>
+                        <span class="stat-value">73%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">RAM:</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 45%"></div>
+                        </div>
+                        <span class="stat-value">45%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">NET:</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 91%"></div>
+                        </div>
+                        <span class="stat-value">91%</span>
+                    </div>
+                </div>
+                
+                <div class="panel-header">ACTIVE PROTOCOLS</div>
+                <div class="protocol-list">
+                    <div class="protocol-item active">DEFENSE MATRIX</div>
+                    <div class="protocol-item active">THREAT DETECTION</div>
+                    <div class="protocol-item">STEALTH MODE</div>
+                    <div class="protocol-item active">AUTO REPAIR</div>
+                </div>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="right-panel">
+                <div class="panel-header">NETWORK ANALYSIS</div>
+                <div class="network-grid">
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="network-nodes">
+                        <div class="node" style="top: 20%; left: 30%"></div>
+                        <div class="node" style="top: 40%; left: 60%"></div>
+                        <div class="node" style="top: 70%; left: 20%"></div>
+                        <div class="node" style="top: 60%; left: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="panel-header">THREAT LEVEL</div>
+                <div class="threat-meter">
+                    <div class="threat-bar">
+                        <div class="threat-fill"></div>
+                    </div>
+                    <div class="threat-label">MINIMAL</div>
+                </div>
+            </div>
+
+            <!-- Bottom Terminal -->
+            <div class="terminal-panel">
+                <div class="terminal-header">
+                    <span>COMMAND INTERFACE</span>
+                    <div class="terminal-controls">
+                        <div class="control-dot red"></div>
+                        <div class="control-dot yellow"></div>
+                        <div class="control-dot green"></div>
+                    </div>
+                </div>
+                <div class="terminal-content" id="terminal">
+                    <div class="terminal-line">
+                        <span class="prompt">jarvis@system:~$</span>
+                        <span class="cursor">_</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scanning Lines -->
+            <div class="scan-line horizontal"></div>
+            <div class="scan-line vertical"></div>
+
+            <!-- Corner Elements -->
+            <div class="corner-element top-left"></div>
+            <div class="corner-element top-right"></div>
+            <div class="corner-element bottom-left"></div>
+            <div class="corner-element bottom-right"></div>
+
+            <!-- Glitch Overlay -->
+            <div class="glitch-overlay"></div>
+        </div>
+
+        <!-- Data Stream -->
+        <div class="data-stream">
+            <div class="stream-line" style="animation-delay: 0s;"></div>
+            <div class="stream-line" style="animation-delay: 0.5s;"></div>
+            <div class="stream-line" style="animation-delay: 1s;"></div>
+            <div class="stream-line" style="animation-delay: 1.5s;"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
